@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("/Tipografias/Montserrat/MontserratAlternates-Thin.otf");
+}
+
+.barraNav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  background: #d55f8f;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 600;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Cocogoose";
+  font-size: 40px;
+  color: #fef4ea;
+}
+
+.links {
+  font-family: "Montserrat Alternates";
+  font-size: 15px;
+  margin: 0px 20px;
+  text-decoration: none;
+  justify-content: space-between;
+  color: #fef4ea;
+  transition-duration: 100ms;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.links:hover {
+  padding: 0px 0px;
+  margin: 0px 20px;
+}
+
+@media (max-width: 740px) {
+  .barraNav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.active-link {
+  color: #323745;
+}

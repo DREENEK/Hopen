@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Cocogoose";
+  src: url("/HopenAcce/src/Tipografias/Cocogoose/Pro-trial.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/HopenAcce/src/Tipografias/Montserrat/MontserratAlternates-Thin.otf");
+}
+
+.container {
+  margin: 3.5rem auto !important;
+}
+
+form div span {
+  font-family: "Cocogoose";
+  color: #d55f8f;
+}
+
+form H5 {
+  font-family: "Montserrat Alternates";
+  text-align: center;
+}
+
+form div input {
+  font-family: "Montserrat Alternates";
+  font-size: 1.25rem;
+  color: #323745;
+}
+
+form div button {
+  font-size: 20px;
+  font-family: "Montserrat Alternates ExtraBold";
+  text-decoration: none;
+  color: #f094be;
+  background-color: #fef4ea;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  transition-duration: 0.2s;
+}
+
+form div button:hover {
+  font-size: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.137);
+}
+
+input {
+  border-color: #fef4ea;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  outline: 0 none;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #d55f8f;
+  box-shadow: 0 0px 0px rgba(255, 163, 198, 0.692) inset,
+    0 0 8px rgba(255, 163, 198, 0.692);
+  outline: 0 none;
+}
+
+input.ng-touched.ng-invalid:focus,
+input.ng-touched.ng-invalid[type]:focus {
+  border-color: #d55f8f;
+  box-shadow: 0 0px 0px rgba(255, 163, 198, 0.692) inset,
+    0 0 1px rgba(255, 163, 198, 0.692);
+  outline: 0 none;
+}
+
+input.ng-valid {
+  border-color: #9bcaae;
+  box-shadow: 0 0px 0px rgba(255, 163, 198, 0.692) inset,
+    0 0 8px rgba(163, 255, 217, 0.493);
+  outline: 0 none;
+}
+
+.MessageCorreoError {
+  color: #d55f8f;
+}
+
+.MessagePasswordError {
+  color: #d55f8f;
+}

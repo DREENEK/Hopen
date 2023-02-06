@@ -1,0 +1,101 @@
+<section class="vh-100">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="row g-0">
+          <div class="col-md-6 col-lg-5 d-none d-md-block animate__animated  animate__fadeInLeft animate__slow	2s">
+            <img src="./assets/ilustraciones/login.png" alt="login form" class="img-fluid p-2" />
+          </div>
+          <div class="col-md-6 col-lg-7 d-flex align-items-center">
+            <div class="card-body p-4 p-lg-5 text-black">
+
+              <form [formGroup]="formRegistro" (ngSubmit)="registrarUsuario()"
+                class="animate__animated  animate__fadeInRight animate__slow	2s">
+
+                <div class="d-flex align-items-center justify-content-center mb-3 pb-1">
+                  <span class="h1 fw-bold mb-0">HOPEN</span>
+                </div>
+
+                <h5 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px;">Registrar una nueva cuenta
+                </h5>
+
+                <div class="form-outline mb-5">
+                  <input type="text" class="form-control form-control-lg" maxlength="30" formControlName="Nombres"
+                    placeholder="Primer Nombre" />
+                  <ng-container
+                    *ngTemplateOutlet="MessageNombresError;context{error:formRegistro.get('Nombres')?.errors}"></ng-container>
+                </div>
+
+                <div class="form-outline mb-5">
+                  <input type="text" class="form-control form-control-lg" maxlength="30" formControlName="Apellidos"
+                    placeholder="Primer Apellido" />
+                  <ng-container
+                    *ngTemplateOutlet="MessageApellidosError;context{error:formRegistro.get('Apellidos')?.errors}"></ng-container>
+                </div>
+
+                <div class="form-outline mb-5">
+                  <input type="email" class="form-control form-control-lg" formControlName="Correo" maxlength="50"
+                    placeholder="Ingresa tu Correo Electrónico" />
+                  <ng-container
+                    *ngTemplateOutlet="MessageCorreoError;context{error:formRegistro.get('Correo')?.errors}"></ng-container>
+                </div>
+
+                <div class="form-outline mb-5">
+                  <input type="password" class="form-control form-control-lg" maxlength="8" formControlName="Contrasena"
+                    [controlErrorsTpl]="MessagePasswordError" placeholder="Crea una contraseña" />
+                </div>
+
+                <div class="form-outline mb-5">
+                  <input type="password" class="form-control form-control-lg" color="primary" maxlength="8"
+                    formControlName="ConfirmarContrasena" placeholder="Confirmar contraseña" />
+                </div>
+
+                <div class="pt-1 d-flex justify-content-center">
+                  <button class="btn btn-dark btn-lg btn-block" [disabled]="formRegistro.invalid" type="
+                                        submit">Registrarse</button>
+                </div>
+
+                <p class="mt-5 pb-lg-2 d-flex justify-content-center" style="color: #393f81;">¿Ya tienes
+                  una
+                  cuenta? <a routerLink="/login" style="color: #D55F8F;"> Inicia sesión aquí</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template let-error="error" let-text="text" #MessageNombresError>
+    <div *ngIf="error?.pattern?.requiredPattern">
+      <i class="MessageNombresError">Ingrese un solo nombre válido.</i>
+    </div>
+    <div *ngIf="error?.minlength">
+      <i class="MessageNombresError">Deben haber mínimo 3 caracteres.</i>
+    </div>
+  </ng-template>
+
+  <ng-template let-error="error" let-text="text" #MessageApellidosError>
+    <div *ngIf="error?.pattern?.requiredPattern">
+      <i class="MessageApellidosError">Ingrese un solo apellido válido.</i>
+    </div>
+    <div *ngIf="error?.minlength">
+      <i class="MessageApellidosError">Deben haber mínimo 3 caracteres.</i>
+    </div>
+  </ng-template>
+
+
+  <ng-template let-error="error" let-text="text" #MessageCorreoError>
+    <div *ngIf="error?.pattern?.requiredPattern">
+      <i class="MessageCorreoError">No es un correo válido. (Asegurese de usar solo minúsculas, números o símbolos)</i>
+    </div>
+  </ng-template>
+
+
+  <ng-template let-error let-text="text" #MessagePasswordError>
+    <div *ngIf="error?.minlength">
+      <i class="MessagePasswordError">La contraseña debe contener minimo 8 caracteres</i>
+    </div>
+  </ng-template>
+
+</section>

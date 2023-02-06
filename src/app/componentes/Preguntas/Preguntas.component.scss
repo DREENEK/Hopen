@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("/Tipografias/Montserrat/MontserratAlternates-Thin.otf");
+}
+
+@font-face {
+  font-family: "Montserrat ExtraBold";
+  src: url("/Tipografias/Montserrat/MontserratAlternates-ExtraBold.otf");
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-top: 4.5rem !important;
+}
+
+.accordion {
+  width: 1020vw;
+}
+
+.accordion-button {
+  background-color: #fef4ea;
+  color: #f094be;
+  font-family: "Montserrat ExtraBold";
+}
+
+.accordion-item {
+  border-radius: 10px;
+  border: 1px solid #fef4ea;
+  margin: 15px 0px;
+}
+
+.accordion-body {
+  font-family: "Montserrat Alternates";
+}
+
+.PreguntaImg {
+  display: block;
+  margin: 0px 100px;
+}
+
+.PreguntaImg img {
+  width: 30vw;
+}

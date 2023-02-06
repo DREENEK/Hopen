@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("/Tipografias/Montserrat/MontserratAlternates-Thin.otf");
+}
+
+@font-face {
+  font-family: "Montserrat Alternates Bold";
+  src: url("/Tipografias/Montserrat/MontserratAlternates-ExtraBold.otf");
+}
+
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  margin: 12rem 0rem !important;
+}
+.contenedor {
+  padding: 40px 60px;
+  width: 40vw;
+  border-radius: 13px;
+  background: #fef4ea;
+  box-shadow: 14px 14px 0px #f094be, -14px -14px 0px #f8c4ba;
+}
+
+.ParrafoInfo {
+  font-size: 100%;
+  font-family: "Montserrat Alternates";
+  text-align: justify;
+}
+
+.titulo {
+  color: #d55f8f;
+  font-size: 15vh;
+  font-family: "Cocogoose";
+}
+.resaltado {
+  font-family: "Montserrat Alternates ExtraBold";
+  font-weight: bold;
+}
